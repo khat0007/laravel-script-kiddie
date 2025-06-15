@@ -60,43 +60,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## 🔐 Security Features (Assignment 3)
 
-### IDOR Protection
-- Login with user A: `usera@example.com`, password: `password`
-- Try to access `/invoices/1` and `/invoices/2`
-- `/invoices/2` will return 403 if it belongs to another user.
-
-### Session Hijacking Prevention
-- Cookies are set to Secure, HttpOnly and SameSite=Strict
-- HTTPS enforced on the live site.
-## 🔐 Security Features (Assignment 3)
-
-### ✅ IDOR Protection
-
-To test IDOR prevention:
-
-1. Login as **User A**
-2. Create an invoice (e.g., ID 1)
-3. Login as **User B**
-4. Try to access `/invoices/1` or send a DELETE request to `/invoices/1`
-5. You will receive a `403 Unauthorized` response
-
-This ensures users cannot access or delete invoices they don't own.
-
-### ✅ Session Hijacking Protection
-
-- `SESSION_SECURE_COOKIE=true` ensures session cookies are only sent via HTTPS
-- `SESSION_HTTP_ONLY=true` protects from JavaScript access
-- `SESSION_SAME_SITE=strict` prevents CSRF-style cookie attacks
-- HTTPS is enforced using `URL::forceScheme('https')`
-- Laravel automatically regenerates the session ID after login
-
-### 🌐 Hosted App
-
-**Live demo**: [https://your-deployment-url.com](https://your-deployment-url.com)
-
-- User A: `usera@example.com` / password
-- User B: `userb@example.com` / password
-
-
+### My login I'D is... khat0007@hz.nl   password is: 123123A*
